@@ -1,0 +1,31 @@
+{
+  "name": "simulasi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistem Simulasi Nilai dengan penerapan Zero Trust Security (API Gateway sebagai PEP, Policy Engine, Service Nilai, dan Service Transkrip).",
+  "main": "gateway/app.js",
+  "scripts": {
+    "start": "node db/seed.js && concurrently -k -n gateway,nilai,transkrip -c blue,cyan,green \"node gateway/app.js\" \"node service-nilai/app.js\" \"node service-transkrip/app.js\"",
+    "seed": "node db/seed.js",
+    "reset": "node db/seed.js --reset",
+    "start:gateway": "node gateway/app.js",
+    "start:nilai": "node service-nilai/app.js",
+    "start:transkrip": "node service-transkrip/app.js",
+    "smoke": "node scripts/smoke-test.js",
+    "test:kepemilikan": "node scripts/uji-kepemilikan.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^2.0.7",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

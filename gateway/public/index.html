@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMULAI - Sistem Simulasi Nilai</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="login-view" class="login-shell">
+    <section class="login-card">
+      <div class="login-head">
+        <h1>SIMULAI - Sistem Simulasi Nilai</h1>
+        <p class="muted">Silakan masuk untuk melanjutkan.</p>
+      </div>
+
+      <form id="login-form" class="form-grid" autocomplete="off">
+        <label class="field">
+          <span>Username</span>
+          <input id="username" name="username" type="text" placeholder="Masukkan username" required>
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input id="password" name="password" type="password" placeholder="Masukkan password" required>
+        </label>
+        <label class="field">
+          <span>Device ID</span>
+          <select id="device-id" name="device" required>
+            <option value="" disabled selected>Pilih Device ID</option>
+            <option value="DEV-ADMIN-01">DEV-ADMIN-01 - Admin</option>
+            <option value="DEV-DOSEN1-01">DEV-DOSEN1-01 - Dosen Wawan Sukmawan</option>
+            <option value="DEV-DOSEN2-01">DEV-DOSEN2-01 - Dosen Kirana Lestari</option>
+            <option value="DEV-MHS1-01">DEV-MHS1-01 - Mahasiswa Andi Pratama (2023001)</option>
+            <option value="DEV-MHS2-01">DEV-MHS2-01 - Mahasiswa Rina Lestari (2023002)</option>
+            <option value="DEV-MHS3-01">DEV-MHS3-01 - Mahasiswa Fajar Nugraha (2023003)</option>
+          </select>
+        </label>
+        <button id="login-button" class="btn primary block" type="submit">Masuk</button>
+        <p id="login-error" class="form-error" role="alert"></p>
+      </form>
+    </section>
+  </div>
+
+  <div id="app-view" class="hidden">
+    <header class="topbar">
+      <div class="brand-inline">
+        <div class="logo small">SIMULAI</div>
+        <div>
+          <strong>SIMULAI</strong>
+          <span>Sistem Simulasi Nilai</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <span id="user-chip" class="chip"></span>
+        <button id="logout-button" class="btn ghost" type="button">Keluar</button>
+      </div>
+    </header>
+    <main id="main" class="page"></main>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

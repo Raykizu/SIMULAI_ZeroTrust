@@ -1,0 +1,27 @@
+==================================================
+SIMULAI - DAFTAR AKUN
+==================================================
+
+A. AKUN PENGGUNA
+--------------------------------------------------
+Role       Username   Password   Device ID        NIM       Nama
+--------------------------------------------------
+Admin      admin      admin123   DEV-ADMIN-01     -         Admin Program Studi
+Dosen      dosen1     dosen123   DEV-DOSEN1-01    -         Wawan Sukmawan
+Dosen      dosen2     dosen123   DEV-DOSEN2-01    -         Kirana Lestari
+Mahasiswa  mhs1       mhs123     DEV-MHS1-01      2023001   Andi Pratama
+Mahasiswa  mhs2       mhs123     DEV-MHS2-01      2023002   Rina Lestari
+Mahasiswa  mhs3       mhs123     DEV-MHS3-01      2023003   Fajar Nugraha
+--------------------------------------------------
+
+B. AKUN SERVICE-TO-SERVICE
+--------------------------------------------------
+Client ID      : service-nilai
+Client Secret  : nilai-secret-2026
+--------------------------------------------------
+
+Catatan:
+- Device ID dipilih dari kotak dropdown saat login.
+- Login akan ditolak jika username, password, atau device tidak cocok.
+- Setiap user hanya memiliki satu device terdaftar.
+==================================================
